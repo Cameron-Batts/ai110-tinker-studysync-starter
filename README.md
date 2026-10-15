@@ -62,3 +62,11 @@ pytest
 - `test_scoring.py` — starting point for your own tests
 
 Your instructor will tell you which tinker you're on. Follow the activity on the course portal.
+
+## Week 2 Reflection
+
+I moved apply_streak_bonus from scoring.py to scoring_helpers.py and added the import so scoring.py could still use it. The demo output stayed the same, and both tests passed.
+
+One AI suggestion I accepted was testing a score of 80 to make sure it returned “Good.” I ran the test and confirmed it passed. Testing before moving the function helped me check that I hadn’t changed the behavior. I didn’t have an AI suggestion that I needed to fix or reject.
+
+My breaker inputs were -10, 110, and 87.5. They returned “Skip,” “Great,” and “Good.” The 110 result stood out because the rating function accepts scores above 100. I left it unchanged because apply_streak_bonus caps scores at 100 in the normal app flow. I flagged negative scores as out of scope and kept the decimal behavior because it worked with the existing rating ranges.
